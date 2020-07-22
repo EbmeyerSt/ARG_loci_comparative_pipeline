@@ -26,10 +26,9 @@ File Descriptions
 hybrid_card.dmnd is a DIAMOND format database containing all resistance genes present in both CARD and ResFinder, with CARD format headers
 
 is_db.dmnd is a DIAMOND format database containing custom collected sequences of transposases, IS and ISCR elements - note that the annotations in this file 
-are only used to improve the visualization - in the comparative analysis, sequences are manually searched against ISFinder to identify different IS.
+are only used to improve the visualization - in the comparative analysis, sequences are manually searched against ISFinder to identify different IS. NOTE: This file is too large to upload here - it can be provided to the editor upon request
 
-uniprotKB_clustered_nohypo_merged_nospace_GN_jan2019.dmnd is a DIAMOND format database containing a modified form of UniprotKB - Note that this is used only for visualization.
-(e.g to see whether two loci of the same species are annotated similarily)
-The exact identity of environmental genes is confirmed through manual blast analyses in the comparative analysis.
+uniprotKB_clustered_nohypo_merged_nospace_GN_jan2019.dmnd is a DIAMOND format database containing a modified form of UniprotKB - Note that this is used only for visualization.(e.g to see whether two loci of the same species are annotated similarily)
+The exact identity of environmental genes is confirmed through manual blast analyses in the comparative analysis.NOTE: This file is too large to upload here - it can be provided to the editor upon request
 
 
