@@ -5,13 +5,14 @@ The scripts need to be run on a UNIX system with python3.7 installed.
 DISCLAIMER: The visualization created by this pipeline is not perfect - ORF predictions and annotations may contain errors. It is therefore strongly advised to manually curate sequences of interest in order to make conclusions about a potential origin of a resistance gene!
 
 NOTE: The size of the whole dataset is considerable - obtaining the results may take several days dependend on 
-your computational resources! A smaller test set of genomes containing the FOX AmpC-beta-lactamase can be downloaded using SCRIPT X
+your computational resources! A smaller test set of genomes containing the FOX AmpC-beta-lactamase can be downloaded using 'download_FOX_genomes.py'
 
 USAGE INSTRUCTIONS:
 Run the scripts in the following order:
 
 1.) download_assemblies.py and download_plasmids.py will download all available genome assemblies and plasmids (refseq only for plasmids). 
 The size of this dataset is roughly 3.3TB at the time of writing.
+ALTERNATIVE: Download a smaller test set of genomes containing the FOX AmpC-beta-lactamase using 'download_FOX_genomes.py'
 
 2.) create_assembly_db_v8.9.1.py is a pipeline that annotates ARGs all genomes and plasmids, extracts their genetic environments, predicts and annotates genes on the environmental sequences,
 identifies integrons in the sequences. 
@@ -24,7 +25,7 @@ the above script and creates a directory containing all instances of the gene fr
 for input options. The file to be specified with the -flank parameter, all_flanks.csv, is created during creatio of the sqlite3 database.
 
 4.) visualize_v7.8.py creates alignment, phylogeny and visualization of all genetic environments containing the specific resistance gene. The python package ete3 
-needs to be installed in order to run the script
+needs to be installed on your system in order to run the script
 
 File Descriptions
 ------------------
@@ -34,7 +35,7 @@ hybrid_card.dmnd is a DIAMOND format database containing all resistance genes pr
 is_db.dmnd is a DIAMOND format database containing custom collected sequences of transposases, IS and ISCR elements - note that the annotations in this file 
 are only used to improve the visualization - in the comparative analysis, sequences are manually searched against ISFinder to identify different IS. NOTE: This file is too large to upload here - it can be provided to the editor upon request
 
-uniprotKB_clustered_nohypo_merged_nospace_GN_jan2019.dmnd is a DIAMOND format database containing a modified form of UniprotKB - Note that this is used only for visualization.(e.g to see whether two loci of the same species are annotated similarily)
-The exact identity of environmental genes is confirmed through manual blast analyses in the comparative analysis.NOTE: This file is too large to upload here - it can be provided to the editor upon request
+uniprotKBjan2019.fna is a DIAMOND format database containing a modified form of UniprotKB - Note that this is used only for visualization.(e.g to see whether two loci of the same species are annotated similarily).
+The exact identity of environmental genes should confirmed through manual blast analyses in the comparative analysis.
 
 
