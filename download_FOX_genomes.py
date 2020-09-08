@@ -7,7 +7,7 @@ from argparse import RawTextHelpFormatter
 def parse_arguments():
 	man_description='%r\n\nDownload test dataset to specified directory.\n%r' % ('_'*80, '_'*80)
 	parser=argparse.ArgumentParser(description=man_description.replace("'", ""), formatter_class=RawTextHelpFormatter)
-	parser.add_argument('-o', help='path to folder to save genomes to', required=True)
+	parser.add_argument('-o', help='total path(!) to folder to save genomes to', required=True)
 	args=parser.parse_args()
 
 	return args
@@ -51,7 +51,7 @@ def download_uniprot(args):
 	subprocess.call(download_isdb, shell=True)
 
 def unzip(args):
-
+	print('Unzipping downloaded files...')
 	unzip='gunzip -q %s*' % args.o
 	subprocess.call(unzip, shell=True)
 
