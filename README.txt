@@ -14,6 +14,7 @@ Run the scripts in the following order:
 The size of this dataset is roughly 3.3TB at the time of writing.
 
 ALTERNATIVE: Download a smaller test set of genomes containing the FOX AmpC-beta-lactamase using 'download_FOX_genomes.py'. Recommended.
+(This script will also download the UniprotKB and our database of IS/ISCR sequences for annotation).
 
 2.) create_assembly_db_v8.9.1.py is a pipeline that annotates ARGs all genomes and plasmids, extracts their genetic environments, predicts and annotates genes on the environmental sequences, identifies integrons in the sequences. 
 
@@ -40,7 +41,7 @@ File Descriptions
 hybrid_card.dmnd is a DIAMOND format database containing all resistance genes present in both CARD and ResFinder, with CARD format headers
 
 is_db.dmnd is a DIAMOND format database containing custom collected sequences of transposases, IS and ISCR elements - note that the annotations in this file 
-are only used to improve the visualization - in the comparative analysis, sequences are manually searched against ISFinder to identify different IS. NOTE: This file is too large to upload here - it can be provided to the editor upon request
+are only used to improve the visualization - in the comparative analysis, sequences are manually searched against ISFinder to identify different IS.
 
 uniprotKBjan2019.fna is a DIAMOND format database containing a modified form of UniprotKB - Note that this is used only for visualization.(e.g to see whether two loci of the same species are annotated similarily).
 The exact identity of environmental genes should confirmed through manual blast analyses in the comparative analysis.
