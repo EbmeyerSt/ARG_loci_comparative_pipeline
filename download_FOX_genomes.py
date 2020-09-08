@@ -5,8 +5,8 @@ from argparse import RawTextHelpFormatter
 
 
 def parse_arguments():
-	description='%r\n\nDownload test dataset to specified directory.\n%r' % ('_'*80, '_'*80)
-	parser=argparse.ArgumentParser(description.replace("'", ""), formatter_class=RawTextHelpFormatter)
+	man_description='%r\n\nDownload test dataset to specified directory.\n%r' % ('_'*80, '_'*80)
+	parser=argparse.ArgumentParser(description=man_description.replace("'", ""), formatter_class=RawTextHelpFormatter)
 	parser.add_argument('-o', help='path to folder to save genomes to', required=True)
 	args=parser.parse_args()
 
