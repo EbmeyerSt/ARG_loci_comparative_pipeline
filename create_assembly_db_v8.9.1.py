@@ -13,7 +13,7 @@ from collections import defaultdict
 def parse_arguments():
 	man_description='%r\n\nCreates a database in .json format of genomes with annotation of a chosen set of genes including the specific gene sequences, upstream and downstream regions. Database is created in json format.\n%r' % ('_'*80, '_'*80)
 	parser=argparse.ArgumentParser(description=man_description.replace("'", ""), formatter_class=RawTextHelpFormatter)
-	parser.add_argument('-d', '--target_directory', help='path to folder containing a folder for each assembly to be processed', required=True)
+	parser.add_argument('-d', '--target_directory', help='full(!) path to folder containing a folder for each assembly to be processed', required=True)
 	parser.add_argument('-db', '--database', help='database in diamond format containing genes to be annotated', required=True)
 	parser.add_argument('-p', '--processes', help='of cores to run the script on', type=int, default=multiprocessing.cpu_count())
 	parser.add_argument('-id', '--identity', help='identity cutoff for hits to be saved to the database', type=float, default=90)
