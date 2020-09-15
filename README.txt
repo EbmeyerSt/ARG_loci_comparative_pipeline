@@ -7,6 +7,12 @@ DISCLAIMER: The visualization created by this pipeline is not perfect - ORF pred
 NOTE: The size of the whole dataset is considerable - obtaining the results may take several days dependend on 
 your computational resources! A smaller test set of genomes containing the FOX AmpC-beta-lactamase can be downloaded using 'download_FOX_genomes.py'
 
+
+____________________________________________________________________________________________________________________________________________________
+A tutorial guiding you throgh all steps is available at https://github.com/EbmeyerSt/ARG_loci_comparative_pipeline/wiki/Tutorial
+____________________________________________________________________________________________________________________________________________________
+
+
 USAGE INSTRUCTIONS:
 Run the scripts in the following order:
 
