@@ -55,7 +55,8 @@ def download_uniprot(args):
 	#Download custom plasmid summary file
 	download_plassum='gdown https://drive.google.com/uc?id=1b9Irtn_ewBun5eVALV_JGruqNKh0eozN -O %s'\
 	% args.o.strip('/')+'/plasmid_summary.txt'
-	subprocess.call(download_plassum, shell=True)
+	if not os.path.exists(args.o.rstrip('/')+'/plasmid_summary.txt'):
+		subprocess.call(download_plassum, shell=True)
 
 	#Download assembly summary files
 	download_asmsum='wget -P %s ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/assembly_summary.txt' % args.o.rstrip('/')
